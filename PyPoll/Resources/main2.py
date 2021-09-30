@@ -31,7 +31,7 @@ with open(filename) as f:
     correy = [] 
     li = [] 
     otooley = [] 
-
+    unique_candidates = []
 
     for row in reader:
         vote = str(row[0])
@@ -41,7 +41,7 @@ with open(filename) as f:
         counties.append(county)
 
         candidate = str(row[2])
-        candidates.append(candidates)
+        candidates.append(candidate)
 
     total_votes = int(len(votes))
     print(total_votes)
@@ -49,6 +49,17 @@ with open(filename) as f:
     print(str(len(votes)) + ' Votes')
     print(str(len(counties)) + " Counties")
     print(str(len(candidates)) + " Candidates")
+
+
+# unique candidates...how to get there?? 
+    
+
+
+
+
+
+
+
 
 
 # analyzing candidates who received votes + votes by person 
@@ -67,7 +78,40 @@ with open(filename) as f:
 
            
     
-    print(len(khan))
-    print(len(correy))
-    print(len(li))
-    print(len(otooley))
+    print(str(len(khan)) + " votes for Khan...he is the winner")
+    print(str(len(correy)) + " votes for Correy...")
+    print(str(len(li)) + " votes for Li..." )
+    print(str(len(otooley)) + " votes for Otooley...")
+
+
+# setting votes per candidate... 
+
+    khan_votes = len(khan)
+    print(khan_votes)
+
+    correy_votes = len(correy)
+    print(correy_votes)
+
+    li_votes = len(li)
+    print(li_votes)
+
+    otooley_votes = len(otooley)
+    print(otooley_votes)
+
+
+# calculating percentages 
+
+
+    khan_percentage = khan_votes / total_votes *100
+    print(khan_percentage)
+
+    correy_percentage = correy_votes / total_votes *100 
+    print(correy_percentage)
+
+    li_percentage = li_votes / total_votes *100
+    print(li_percentage)
+    
+    otooley_percentage = otooley_votes / total_votes*100
+    print(otooley_percentage)
+
+    print(f'The winner of the election is Khan')
